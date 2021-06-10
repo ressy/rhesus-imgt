@@ -9,7 +9,7 @@ FIELDS = [
     "Accession",   # 1. IMGT/LIGM-DB accession number(s)
     "Allele",      # 2. IMGT gene and allele name
     "Species",     # 3. species
-    "Functional",  # 4. IMGT allele functionality
+    "FuncGroup",   # 4. IMGT allele functionality
     "Region",      # 5. exon(s), region name(s), or extracted label(s)
     "StartAndEnd", # 6. start and end positions in the IMGT/LIGM-DB accession number(s)
     "NumNT",       # 7. number of nucleotides in the IMGT/LIGM-DB accession number(s)
