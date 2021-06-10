@@ -1,0 +1,9 @@
+# conda environment YAML file
+name: rhesus-imgt
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - snakemake
+  - biopython>=1.78
