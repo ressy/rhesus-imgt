@@ -1048,7 +1048,7 @@ atgaattgggtgagacaggtccctggagaagggcttgagtggatgggatggatgaacacc
 aac......actgggaacccaacgtatgcccagggctaaaca...ggacggtttgtcttc
 tccatggacacctctgtcagcacagtgcatctgcagatcagcagcctaaaggctgaggac
 acggccgtgcattactgtacgagaga
->IMGT000064|IGHV7-149*01|Macaca mulatta_AG07107|P|V-REGION| |296 nt|1| | | | |296+30=326| | |
+>IMGT000064|IGHV7-149*01|Macaca mulatta_AG07107|P|V-REGION|501767..502062|296 nt|1| | | | |296+30=326| | |
 caggtgcagctggtgcagtctgggcct...cagatgaagcagcct...ggggcctcagtg
 aagttctcctgcaaggcttct...ggttacaccttc............actagctatgtt
 acgaactgggtgcgacaggcccctggacaagggcttgaatagataggatggatcaacacc
@@ -1062,7 +1062,7 @@ atgaattgggtgcgacaggcccctggacagggccttgagtggatgggatggatgaacacc
 tac......actgggaacccaacgtatgcccagggcttcaca...gaacggtttgtcttc
 tccatggacacctctgtcagcacagtgtacctgcagatcagcagcctaaaggctgaggac
 acggccgtgtattactgtgcgagata
->NW_001121240|IGHV7-193*02|Macaca mulatta_17573|ORF|V-REGION|226869..227164|296 nt|1| | | | |296+30=326| | |
+>NW_001121240|IGHV7-193*02|Macaca mulatta_17573|F|V-REGION|226869..227164|296 nt|1| | | | |296+30=326| | |
 caggtgcagctggtgcagtctgggcct...gaggtgaagcagcct...ggggcctcagtg
 aaggtctcctgcaaggcttct...ggttacagcttc............accacctatggt
 atgaattgggtgcgacaggcccctggacagggccttgagtggatgggatggatgaacacc

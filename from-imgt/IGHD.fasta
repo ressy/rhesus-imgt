@@ -6,11 +6,11 @@ ggtatagctggaactat
 ggtatagctggaacgac
 >IMGT000064|IGHD1-20*01|Macaca mulatta_AG07107|F|D-REGION|1642382..1642398|17 nt|1| | | | |17+0=17| | |
 ggtatagctggaacaac
->IMGT000064|IGHD1-26*01|Macaca mulatta_AG07107|ORF|D-REGION|1653066..1653082|17 nt|1| | | | |17+0=17| | |
+>IMGT000064|IGHD1-26*01|Macaca mulatta_AG07107|F|D-REGION|1653066..1653082|17 nt|1| | | | |17+0=17| | |
 ggtataactggaactac
 >IMGT000064|IGHD1-32*01|Macaca mulatta_AG07107|F|D-REGION|1663109..1663125|17 nt|1| | | | |17+0=17| | |
 ggtataactggaatgac
->IMGT000064|IGHD1-38*01|Macaca mulatta_AG07107|ORF|D-REGION|1672047..1672063|17 nt|1| | | | |17+0=17| | |
+>IMGT000064|IGHD1-38*01|Macaca mulatta_AG07107|F|D-REGION|1672047..1672063|17 nt|1| | | | |17+0=17| | |
 ggaacacctggaacgac
 >IMGT000064|IGHD1-44*01|Macaca mulatta_AG07107|F|D-REGION|1681408..1681427|20 nt|1| | | | |20+0=20| | |
 agtatagtgggaactacaac
@@ -50,9 +50,9 @@ gtactggggtgattattatgac
 gtattacgattacgatattagtagtcgatattaaacc
 >IMGT000064|IGHD3-9*01|Macaca mulatta_AG07107|F|D-REGION|1627491..1627524|34 nt|1| | | | |34+0=34| | |
 gtattacgaggatgattacggttactattacacc
->IMGT000064|IGHD4-11*01|Macaca mulatta_AG07107|ORF|D-REGION|1628631..1628645|15 nt|1| | | | |15+0=15| | |
+>IMGT000064|IGHD4-11*01|Macaca mulatta_AG07107|F|D-REGION|1628631..1628645|15 nt|1| | | | |15+0=15| | |
 tgactaccataacta
->IMGT000064|IGHD4-17*01|Macaca mulatta_AG07107|ORF|D-REGION|1638176..1638191|16 nt|1| | | | |16+0=16| | |
+>IMGT000064|IGHD4-17*01|Macaca mulatta_AG07107|F|D-REGION|1638176..1638191|16 nt|1| | | | |16+0=16| | |
 tgactatggtaactac
 >IMGT000064|IGHD4-23*01|Macaca mulatta_AG07107|F|D-REGION|1649288..1649303|16 nt|1| | | | |16+0=16| | |
 tgaatacagtaactac
