@@ -26,6 +26,7 @@ FIELDS_EXTRA = ["Gene", "Family", "Segment", "Locus", "SeqDesc", "Seq"]
 
 URL = "http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory"
 SEGMENTS = ["IGHV", "IGHD", "IGHJ", "IGKV", "IGKJ", "IGLV", "IGLJ"]
+ORGANISMS = ["Macaca_mulatta", "Homo_sapiens"]
 
 def parse_fields(txt):
     return {key: item.strip() for key, item in zip(FIELDS, txt.split("|"))}
@@ -37,8 +38,8 @@ def parse_allele(txt):
         "Segment": txt[0:4],
         "Locus": txt[0:3]}
 
-rule tabulate_segments_rhesus:
-    input: "output/Macaca_mulatta.csv"
+rule tabulate_segments_defaults:
+    input: expand("output/{organism}.csv", organism=ORGANISMS)
 
 rule tabulate_segments:
     output: "output/{organism}.csv"

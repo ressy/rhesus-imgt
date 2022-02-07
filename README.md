@@ -1,7 +1,11 @@
 # Rhesus Macaque V(D)J Gathering from IMGT
 
-This Snakefile downloads IMGT's per-segment FASTA files from here and combines
-them into [one CSV](output/Macaca_mulatta.csv), parsing out details from the FASTA
-description lines:
+This Snakefile downloads IMGT's per-segment FASTA files for [rhesus] and
+[human] antibody genes and combines them into
+[one CSV for Macaca mulatta](output/Macaca_mulatta.csv) and
+[one CSV for Homo sapiens](output/Homo_sapiens.csv), parsing out details from
+the FASTA description lines (as described in the [IMGT FASTA format]).
 
-<http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Macaca_mulatta/IG>
+[IMGT FASTA format]: https://www.imgt.org/IMGTindex/Fasta.php
+[human]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Macaca_mulatta/IG
+[rhesus]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG
