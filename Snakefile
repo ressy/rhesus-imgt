@@ -24,10 +24,8 @@ FIELDS = [
 
 FIELDS_EXTRA = ["Gene", "Family", "Segment", "Locus", "SeqDesc", "Seq"]
 
-URL = "http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Macaca_mulatta/IG"
+URL = "http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory"
 SEGMENTS = ["IGHV", "IGHD", "IGHJ", "IGKV", "IGKJ", "IGLV", "IGLJ"]
-
-FASTA_ALL = expand("from-imgt/{segment}.fasta", segment = SEGMENTS)
 
 def parse_fields(txt):
     return {key: item.strip() for key, item in zip(FIELDS, txt.split("|"))}
@@ -39,14 +37,17 @@ def parse_allele(txt):
         "Segment": txt[0:4],
         "Locus": txt[0:3]}
 
+rule tabulate_segments_rhesus:
+    input: "output/Macaca_mulatta.csv"
+
 rule tabulate_segments:
-    output: "output/alleles.csv"
-    input: FASTA_ALL
+    output: "output/{organism}.csv"
+    input: expand("from-imgt/{{organism}}/{segment}.fasta", segment = SEGMENTS)
     run:
         with open(output[0], "wt") as f_out:
             writer = DictWriter(f_out, fieldnames=FIELDS + FIELDS_EXTRA, lineterminator="\n")
             writer.writeheader()
-            for input_fasta in FASTA_ALL:
+            for input_fasta in input:
                 with open(input_fasta) as f_in:
                     for record in SeqIO.parse(f_in, "fasta"):
                         row = parse_fields(record.description)
@@ -55,11 +56,8 @@ rule tabulate_segments:
                         row["Seq"] = str(record.seq)
                         writer.writerow(row)
 
-rule get_fasta_all:
-    input: FASTA_ALL
-
 rule get_fasta:
-    output: "from-imgt/{segment}.fasta"
-    input: HTTP.remote(expand("{url}/{{segment}}.fasta", url=URL), keep_local=True)
+    output: "from-imgt/{organism}/{segment}.fasta"
+    input: HTTP.remote(expand("{url}/{{organism}}/IG/{{segment}}.fasta", url=URL), keep_local=True)
     run:
         shell("mv {input} {output}")
