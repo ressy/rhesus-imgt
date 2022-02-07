@@ -7,5 +7,5 @@ This Snakefile downloads IMGT's per-segment FASTA files for [rhesus] and
 the FASTA description lines (as described in the [IMGT FASTA format]).
 
 [IMGT FASTA format]: https://www.imgt.org/IMGTindex/Fasta.php
-[human]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Macaca_mulatta/IG
-[rhesus]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG
+[rhesus]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Macaca_mulatta/IG
+[human]: http://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG
