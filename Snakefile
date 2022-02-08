@@ -1,5 +1,7 @@
-from csv import DictWriter
+from csv import DictWriter, DictReader
 from Bio import SeqIO
+from Bio.SeqRecord import SeqRecord
+from Bio.Seq import Seq
 from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
 HTTP = HTTPRemoteProvider()
 
@@ -38,8 +40,31 @@ def parse_allele(txt):
         "Segment": txt[0:4],
         "Locus": txt[0:3]}
 
+rule simple_segment_fastas_defaults:
+    input: expand("output/{organism}.{segment}.fasta", organism=ORGANISMS, segment=SEGMENTS)
+
 rule tabulate_segments_defaults:
     input: expand("output/{organism}.csv", organism=ORGANISMS)
+
+rule simple_segment_fastas:
+    output: expand("output/{{organism}}.{segment}.fasta", segment=SEGMENTS)
+    input: "output/{organism}.csv"
+    run:
+        handles = {key: open(path, "wt") for key, path in zip(SEGMENTS, output)}
+        with open(input[0]) as f_in:
+            reader = DictReader(f_in)
+            for row in reader:
+                seg = row["Segment"]
+                # makeblastdb refuses to parse names with character like "/"
+                # (such as in the human sequence "IGHV1/OR15-1*01") so we'll
+                # use "_" in place of any unusual characters
+                seqid = re.sub("[^-A-Za-z0-9*.]", "_", row["Allele"])
+                # remove "." or whatever else we encounter other than letters
+                seq = re.sub("[^A-Z]", "", row["Seq"].upper())
+                SeqIO.write(
+                    SeqRecord(Seq(seq), id=seqid, description=""),
+                    handles[seg],
+                    "fasta-2line")
 
 rule tabulate_segments:
     output: "output/{organism}.csv"
