@@ -215,7 +215,7 @@ atgcactgggtccgccaggctccagggaaggggctggagtgggtctcagctattaatagt
 ggt.........ggtagcacatactacgcagactccgtgaag...ggccgattcaccatc
 tccagagacaactcaaagaacacgctctccctgcaaatgaacagcctgagagctgaggac
 acggccgtgtattactgtgcgaaaga
->NW_001122023|IGHV3-103*02|Macaca mulatta_17573|P|V-REGION|277567..277837|271 nt|1| | || |271+30=301|partial in 3'| |
+>NW_001122023|IGHV3-103*02|Macaca mulatta_17573|ORF|V-REGION|277567..277837|271 nt|1| | || |271+30=301|partial in 3'| |
 gaggtgcagctggtggagtctgggggc...ggcttggcaaagcct...ggggggtccctg
 agactctcctgtgcagcctct...ggattcaccttc............agtagctactgg
 atgaattgggtccgccagactccagggaaggggctggagtggatctcagctattaatagt
@@ -747,11 +747,11 @@ atgtactgggtccgccaggctccagggaaggggctggagtgggtctcagctattaatact
 ggt......gggggtagcacatggtacacagactccgtgaag...ggccgattcaccatc
 tccaaagagaacgccaagaacacactgtatcttcaaatggacagcctgagagctgaggac
 acggctgtctattactgtgcgaaagaca
->NW_001122023|IGHV3S3*01|Macaca mulatta_17573|P|V-REGION|41504..41805|302 nt|1| | | | |302+24=326| | |
+>NW_001122023|IGHV3S3*01|Macaca mulatta_17573|P|V-REGION|41504..41805|302 nt|1| | || |302+24=326| | |
 gaggtgcagttggtggagtctggggga...ggcttggtacagcct...ggggggtccctg
 agactctcctgtgcagcctct...ggattcaccttt............ggtgattatggc
 atgagctgggtccgccaggctccagggaaggggccggagtgggtaggtttaattagaaac
-taagct...aatggtgggacagcagaatacgccgcgtctgtgaaaggcagattcaccatc
+taagctaatggtgggacagcagaatacgccgcgtctgtgaaa...ggcagattcaccatc
 tccagagatgattcgaaaagctttgccagtctgcaaatgagcagcctgaaaaccgaggac
 acggccgtgtattactgtactagaga
 >NW_001122023|IGHV3S4*01|Macaca mulatta_17573|F|V-REGION|48238..48533|296 nt|1| | | | |296+30=326| | |
