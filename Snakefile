@@ -40,11 +40,28 @@ def parse_allele(txt):
         "Segment": txt[0:4],
         "Locus": txt[0:3]}
 
+TARGET_FASTAS = expand("output/{organism}.{segment}.fasta", organism=ORGANISMS, segment=SEGMENTS)
+TARGET_CSVS = expand("output/{organism}.csv", organism=ORGANISMS)
+TARGET_IMGT_FASTAS = expand("from-imgt/{organism}/{segment}.fasta", organism=ORGANISMS, segment=SEGMENTS)
+
+rule all:
+    input: TARGET_FASTAS
+
+rule clean:
+    run:
+        for path in TARGET_FASTAS + TARGET_CSVS:
+            shell(f"rm '{path}'")
+
+rule realclean:
+    run:
+        for path in TARGET_FASTAS + TARGET_CSVS + TARGET_IMGT_FASTAS:
+            shell(f"rm '{path}'")
+
 rule simple_segment_fastas_defaults:
-    input: expand("output/{organism}.{segment}.fasta", organism=ORGANISMS, segment=SEGMENTS)
+    input: TARGET_FASTAS
 
 rule tabulate_segments_defaults:
-    input: expand("output/{organism}.csv", organism=ORGANISMS)
+    input: TARGET_CSVS
 
 rule simple_segment_fastas:
     output: expand("output/{{organism}}.{segment}.fasta", segment=SEGMENTS)
