@@ -1,9 +1,10 @@
 # conda environment YAML file
 name: rhesus-imgt
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
-  - snakemake
-  - biopython>=1.78
+  - snakemake>=7.25
+  - biopython>=1.81
+  - beautifulsoup4>=4.12
