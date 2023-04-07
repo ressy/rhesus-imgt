@@ -62,12 +62,12 @@ rule all:
 rule clean:
     run:
         for path in TARGET_FASTAS + TARGET_CSVS:
-            shell(f"rm '{path}'")
+            shell(f"rm -f '{path}'")
 
 rule realclean:
     run:
         for path in TARGET_FASTAS + TARGET_CSVS + TARGET_IMGT_FASTAS:
-            shell(f"rm '{path}'")
+            shell(f"rm -f '{path}'")
 
 rule simple_segment_fastas_defaults:
     input: TARGET_FASTAS
